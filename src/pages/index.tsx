@@ -1,8 +1,8 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 
-
 import { SubscribeButton } from '../components/SubscribeButton';
+import { Footer } from '../components/Footer';
 import { stripe } from '../services/stripe';
 
 import styles from './home.module.scss';
@@ -36,8 +36,9 @@ export default function Home({ product }: HomeProps) {
           <SubscribeButton priceId={product.priceId} />
         </section>
 
-        <img src="/images/avatar.svg" alt="Girl coding"/>
+        <img src="/images/avatar.svg" alt="Girl coding"/>        
       </main>
+      <Footer />
     </>
   )
 }
@@ -56,7 +57,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       product,
-    }    ,
+    },
     revalidate: 60 * 60 *24, // 24 hours
   }
 }

@@ -1,0 +1,50 @@
+.footerContainer {
+  position: absolute;
+  width: 100%;
+  padding: 20px 0;
+  bottom: 0;
+  text-align: center;
+  color: var(--gray-300);  
+  border-top: 1px solid var(--gray-800);
+}
+
+.footerHeart {
+  fill: #f00;
+  position: relative;
+  width: 15px;
+  margin: 0 5px;
+  -webkit-animation: pulse 1.2s ease infinite;
+          animation: pulse 1.2s ease infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+
